@@ -1,0 +1,11 @@
+<mat-card >
+  <mat-card-title style="color: green;"  *ngIf="item.typeItem === 'fruit'" >
+    {{item.typeItem}}   </mat-card-title>
+    <mat-card-title style="color: orangered;"  *ngIf="item.typeItem === 'vegi'" >
+        {{item.typeItem}}   </mat-card-title>
+  <mat-card-content>
+    {{item.nameItem}}
+    <br>
+    {{item.priceItem}}
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,25 @@
+ <br>
+<div  class="container">
+
+
+  <mat-card class="baskethead" > Basket </mat-card>
+
+  <br>
+
+  <app-data-enter (onvegiAdd)="addFood($event)" (onfruitAdd)="addFruit($event)" ></app-data-enter>
+  <br>
+
+  <mat-divider></mat-divider>
+
+  <app-show-data *ngFor="let item of itemData"
+   [item]='item'></app-show-data>
+
+
+
+
+</div>
+
+
+
+
+

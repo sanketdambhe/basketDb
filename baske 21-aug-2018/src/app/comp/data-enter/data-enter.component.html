@@ -1,0 +1,42 @@
+
+  <div fxLayout="row" fxLayout.lt-sm="column"  fxLayoutAlign="space-around center" >
+
+    <div fxLayout="column"   >
+      <br>
+        <mat-form-field>
+          <mat-select [(ngModel)]="typeItem" placeholder="please select your type">
+            <mat-option *ngFor="let type of types" [value]="type" > {{type}} </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+          <div fxLayout="row"  fxLayoutAlign="space-around start" >
+            <label for="Name" class="form-control-label">Name :-</label>
+            <input type="text" [(ngModel)]="nameItem"  class="form-control w-75">
+          </div>
+
+      <br>
+
+      <mat-form-field class="w-100">
+        <input matInput type="number" [(ngModel)]="priceItem" placeholder=" Place Enter Item Amount">
+      </mat-form-field>
+
+       <br>
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+
+        <button mat-raised-button color="accent"
+        (click)="onAddFruit()" [disabled]="typeItem === 'vegi'"
+        >Add Fruit</button>
+
+        <button mat-raised-button color="accent"
+        (click)="onAddVegi()" [disabled]="typeItem === 'fruit'"
+        >Add Vigitable</button>
+
+
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        
+      </div>
+      </div>
+
+
+  </div>
